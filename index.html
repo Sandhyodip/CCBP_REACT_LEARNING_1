@@ -15,15 +15,43 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module">
+    <!-- <script type="text/javascript">
       const rootElement = document.getElementById("root");
-      const elementProps = {
-        className: "greeting",
-        children: "Hello, Sanchari!",
-      };
+      const element = document.createElement("h1");
+      element.textContent = "JavaScript!";
+      element.classList.add("greeting");
+      rootElement.appendChild(element);
+    </script> -->
+    <!-- <script type="module">
+      const rootElement = document.getElementById("root");
       const elementType = "h1";
-      const element = React.createElement(elementType, elementProps);
-      ReactDOM.render(element, rootElement);
+      const elementProps= {className:'greeting', children:'React with Modules!'};
+      const element = React.createElement(elementType,elementProps);
+      ReactDOM.render(element, rootElement);  
+    </script> -->
+    <script type="text/babel">
+      const rootElement = document.getElementById("root");
+      //const element = <h1 className='greeting'>Babel & JSX!</h1>
+    //   const element = (
+    //     <div>
+    //       <h1 className="greeting">Babel & JSX!</h1>
+    //       <p>Practice.</p>
+    //     </div>
+    //   );
+    // const name = "Sandhyodip";
+    // const title = 'Das';
+    // const name = "Sanchari";
+    // const title = 'Ghosh';
+    const cssClass = "greeting";
+    // const element = <h1 className={cssClass}>Hello, {name + ' ' + title}!</h1>;
+    const formatName = (user)=> user.firstName + ' ' + user.lastName;
+    const data = {firstName: 'Ritabrata', lastName: 'Dutta'};
+    const userData = {firstName: 'Mridula', lastName: 'Das'};
+    const addFunction = (a,b) => a+b;
+    //const element = <h1 className={cssClass}>{formatName(data)}</h1>    
+    //const element = <h1 className={cssClass}>{formatName(userData)}</h1>    
+    const element = <h1 className={cssClass}>Addition of 10 & 20 is {addFunction(10,20)}</h1>    
+    ReactDOM.render(element, rootElement);
     </script>
   </body>
 </html>
