@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- <script type="text/javascript">
+      const rootElement = document.getElementById("root");
+      const element = document.createElement("h1");
+      element.textContent = "JavaScript!";
+      element.classList.add("greeting");
+      rootElement.appendChild(element);
+    </script> -->
+    <!-- <script type="module">
+      const rootElement = document.getElementById("root");
+      const elementType = "h1";
+      const elementProps= {className:'greeting', children:'React with Modules!'};
+      const element = React.createElement(elementType,elementProps);
+      ReactDOM.render(element, rootElement);  
+    </script> -->
+    <script type="text/babel">
+      const rootElement = document.getElementById("root");
+      //const element = <h1 className='greeting'>Babel & JSX!</h1>
+    //   const element = (
+    //     <div>
+    //       <h1 className="greeting">Babel & JSX!</h1>
+    //       <p>Practice.</p>
+    //     </div>
+    //   );
+    // const name = "Sandhyodip";
+    // const title = 'Das';
+    // const name = "Sanchari";
+    // const title = 'Ghosh';
+    const cssClass = "greeting";
+    // const element = <h1 className={cssClass}>Hello, {name + ' ' + title}!</h1>;
+    //const formatName = (user)=> user.firstName + ' ' + user.lastName;
+    //const data = {firstName: 'Ritabrata', lastName: 'Dutta'};
+    //const userData = {firstName: 'Mridula', lastName: 'Das'};
+    //const addFunction = (a,b) => a+b;
+    //const element = <h1 className={cssClass}>{formatName(data)}</h1>    
+    //const element = <h1 className={cssClass}>{formatName(userData)}</h1>    
+    //const element = <h1 className={cssClass}>Addition of 10 & 20 is {addFunction(10,20)}</h1>    
+    const App = () => <h1>Hello JSX!</h1>;
+    ReactDOM.render(<App />, rootElement);
+    </script>
+  </body>
+</html>
